@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import './App.css';
 import Navbar from './components/Navbar';
+import Name from './components/Name';
 
 function App() {
   const darkMode = useSelector(state => state.theme.darkMode);
@@ -17,6 +18,7 @@ function App() {
       />
       <div className="relative z-10">
         <Navbar />
+      <Name/>
       </div>
     </div>
   );
