@@ -28,19 +28,17 @@ const Navbar = () => {
 
         <div className="flex flex-wrap items-center justify-between md:justify-evenly">
           <ul
-            className={`flex flex-wrap font-semibold items-center flex-row md:space-x-6 ${
-              darkMode
+            className={`flex flex-wrap font-semibold items-center flex-row md:space-x-6 ${darkMode
                 ? "bg-gradient-to-r from-lime-300 via-white to-blue-600 bg-clip-text text-transparent drop-shadow-md"
                 : "text-white"
-            }`}
+              }`}
           >
             <NavLink
               to="/Home"
               className={({ isActive }) =>
-                `p-2 rounded-lg  ${
-                  isActive
-                    ? "bg-white text-black font-bold shadow-md underline"
-                    : "hover:bg-white hover:text-black"
+                `p-2 rounded-lg  ${isActive
+                  ? "bg-white text-black font-bold shadow-md underline"
+                  : "hover:bg-white hover:text-black"
                 }`
               }
             >
@@ -50,10 +48,9 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `p-2 rounded-lg ${
-                    isActive
-                      ? "bg-white text-black font-bold shadow-md"
-                      : "hover:bg-white hover:text-black"
+                  `p-2 rounded-lg ${isActive
+                    ? "bg-white text-black font-bold shadow-md"
+                    : "hover:bg-white hover:text-black"
                   }`
                 }
               >
@@ -64,10 +61,9 @@ const Navbar = () => {
               <NavLink
                 to="/skills"
                 className={({ isActive }) =>
-                  `p-2 rounded-lg ${
-                    isActive
-                      ? "bg-white text-black font-bold shadow-md"
-                      : "hover:bg-white hover:text-black"
+                  `p-2 rounded-lg ${isActive
+                    ? "bg-white text-black font-bold shadow-md"
+                    : "hover:bg-white hover:text-black"
                   }`
                 }
               >
@@ -78,10 +74,9 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `p-2 rounded-lg ${
-                    isActive
-                      ? "bg-white text-black font-bold shadow-md"
-                      : "hover:bg-white hover:text-black"
+                  `p-2 rounded-lg ${isActive
+                    ? "bg-white text-black font-bold shadow-md"
+                    : "hover:bg-white hover:text-black"
                   }`
                 }
               >
