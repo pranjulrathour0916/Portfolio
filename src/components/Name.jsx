@@ -27,7 +27,6 @@ const Name = () => {
         <div className='mt-3'> I’m a passionate full-stack developer skilled in building dynamic, scalable web applications using the MERN stack, with a strong focus on writing clean, efficient code and delivering innovative technical solutions.</div>
       </div>
       <div>
-
       <button className='mt-2 bg-lime-400 text-blue-950 p-1 rounded-md font-semibold animate-pulse'>Read More</button>
       </div>
       </div>
