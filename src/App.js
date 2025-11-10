@@ -2,6 +2,10 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import Navbar from './components/Navbar';
 import Name from './components/Name';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
   const darkMode = useSelector(state => state.theme.darkMode);
@@ -18,7 +22,13 @@ function App() {
       />
       <div className="relative z-10">
         <Navbar />
-      <Name/>
+          <Routes>
+            <Route path='/' element = {<Name/>}/>
+            <Route path='/home' element = {<Name/>}/>
+            <Route path='/about' element = {<About/>}/>
+            <Route path='/skills' element = {<Skills/>}/>
+            <Route path='/contact' element = {<Contact/>}/>
+          </Routes>
       </div>
     </div>
   );

@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react'
 import photo from '../myphoto.jpeg'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons/faAddressBook';
+import { useNavigate } from 'react-router-dom';
 const Name = () => {
   const [visible, setVisible] = useState(false)
+
+  const  navigate = useNavigate()
 
  useEffect(()=>{
    const timeout = setTimeout(() => {
     setVisible(true)
-  }, 2000);
+  }, 1000);
   return () => clearTimeout(timeout)
  } 
   )
@@ -39,6 +45,17 @@ const Name = () => {
             <li className=' [box-shadow:0_0_10px_0_rgb(225,225,225)] flex justify-center text-center items-center w-64 md:h-40 h-24 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-transform duration-300 hover:scale-105'>M.Tech (BITS Pilani, 2022–2025)</li>
             <li className=' [box-shadow:0_0_10px_0_rgb(225,225,225)] flex justify-center text-center items-center w-64 md:h-40 h-24 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-transform duration-300 hover:scale-105 '>Tools I use daily: React, Node, MongoDB, Docker, Jenkins</li>
           </ul>
+          <div className="btn mt-20 flex gap-5 md:gap-24 justify-center text-white">
+            <button className='bg-lime-400 text-blue-950  p-3 rounded-md font-bold shadow-md hover:bg-orange-200' onClick={()=> navigate('/about')}>About
+              <FontAwesomeIcon icon={faAddressCard} className='mx-2 text-xl'/>
+            </button>
+            <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-yellow-200' onClick={()=> navigate('/skills')}>Skiils
+              <FontAwesomeIcon icon={faLightbulb} className='mx-2 text-xl'/>
+            </button>
+            <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-green-400' onClick={()=> navigate('/contact')}>Contact
+              <FontAwesomeIcon icon={faAddressBook} className='mx-2 text-xl'/>
+            </button>
+          </div>
           <br /><br /><br /><br /><br />
     </div>
   )
