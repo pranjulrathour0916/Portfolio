@@ -8,6 +8,15 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-scroll-active");
+    }
+  });
+});
+
+document.querySelectorAll(".fade-scroll").forEach((el) => observer.observe(el));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
