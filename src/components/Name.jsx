@@ -5,6 +5,9 @@ import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons/faLightbulb';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons/faAddressBook';
 import { useNavigate } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';  
+
 const Name = () => {
   const [visible, setVisible] = useState(false)
 
@@ -13,6 +16,12 @@ const Name = () => {
  useEffect(()=>{
    const timeout = setTimeout(() => {
     setVisible(true)
+   Aos.init({
+         duration : 2000,
+         easing : 'ease-in-out',
+         once : true,
+         offset : 0
+       })
   }, 1000);
   return () => clearTimeout(timeout)
  } 
@@ -32,7 +41,7 @@ const Name = () => {
       </div>
       <div className=" text-white md:w-1/4 mt-8 md:mt-0"><img src={photo} alt='no ' style={{ height: '500px', width: 'auto' }} className="rounded-md object-cover shadow-lg border border-gray-700 hover:scale-105 hover:shadow-2xl transition-transform duration-300"/></div>
     </div>
-        <ul className='p-1 text-white font-bold flex flex-col items-center justify-center gap-4 md:w-2/4 md:ml-10 mt-10'>
+        <ul data-aos="fade" className='p-1 text-white font-bold flex flex-col items-center justify-center gap-4 md:w-2/4 md:ml-10 mt-10'>
           <li className='inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce'>🚀 Real-time MERN application</li>
           <li className='inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce'>🔐 Secure, supportable solutions (ITIL mindset)</li>
           <li className='inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce'>🤝 Clear communication, fast iteration</li>
