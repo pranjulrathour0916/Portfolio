@@ -91,25 +91,25 @@ const About = () => {
           <FontAwesomeIcon icon={faBookOpenReader} className='mx-2 md:text-5xl text-white' />
         </h1>
         <div className='bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900 mt-10 md:mx-0 mx-4 md:w-2/3 rounded-xl p-2'>
-        <p className='text-white font-bold text-3xl mx-4 '>BITS Pilani — M.Tech, Computer Systems & Infrastructure</p>
-        <p className='text-gray-200 mt-1 mx-4 font-semibold'>Mar 2022 – Dec 2025</p>
-        <p className='mt-2 mx-4 text-gray-200 '><p className=' text-xl font-bold'>Coursework :</p><span className='font-medium'>Linux, Docker, Web Technologies, AWS, Kubernetes, Jenkins, Cloud Computing</span></p>
-        <p className='text-white font-bold mt-5 mx-4 text-3xl'>CSJM University — BCA (June 2018 – Apr 2021)</p>
+          <p className='text-white font-bold text-3xl mx-4 '>BITS Pilani — M.Tech, Computer Systems & Infrastructure</p>
+          <p className='text-gray-200 mt-1 mx-4 font-semibold'>Mar 2022 – Dec 2025</p>
+          <p className='mt-2 mx-4 text-gray-200 '><p className=' text-xl font-bold'>Coursework :</p><span className='font-medium'>Linux, Docker, Web Technologies, AWS, Kubernetes, Jenkins, Cloud Computing</span></p>
+          <p className='text-white font-bold mt-5 mx-4 text-3xl'>CSJM University — BCA (June 2018 – Apr 2021)</p>
         </div>
-      
+
       </div>
       <div className="btn mt-20 flex gap-5 md:gap-24 justify-center text-white">
-                  <button className='bg-lime-400 text-blue-950  p-3 rounded-md font-bold shadow-md hover:bg-orange-200' onClick={()=> navigate('/about')}>Home
-                    <FontAwesomeIcon icon={faHome} className='mx-2 text-xl'/>
-                  </button>
-                  <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-yellow-200' onClick={()=> navigate('/skills')}>Skiils
-                    <FontAwesomeIcon icon={faLightbulb} className='mx-2 text-xl'/>
-                  </button>
-                  <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-green-400' onClick={()=> navigate('/contact')}>Contact
-                    <FontAwesomeIcon icon={faAddressBook} className='mx-2 text-xl'/>
-                  </button>
-                </div>
-      
+        <button className='bg-lime-400 text-blue-950  p-3 rounded-md font-bold shadow-md hover:bg-orange-200' onClick={() => navigate('/about')}>Home
+          <FontAwesomeIcon icon={faHome} className='mx-2 text-xl' />
+        </button>
+        <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-yellow-200' onClick={() => navigate('/skills')}>Skiils
+          <FontAwesomeIcon icon={faLightbulb} className='mx-2 text-xl' />
+        </button>
+        <button className='bg-lime-400 text-blue-950  p-1 rounded-md font-bold shadow-md hover:bg-green-400' onClick={() => navigate('/contact')}>Contact
+          <FontAwesomeIcon icon={faAddressBook} className='mx-2 text-xl' />
+        </button>
+      </div>
+
 
       <br /><br /><br /><br /><br /><br />
     </div>
