@@ -3,6 +3,7 @@ import {  faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons'
 import { faFile, faMobile, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   
@@ -20,13 +21,13 @@ const Contact = () => {
       <div data-aos="fade-up" className='flex justify-center'>
         <div className='mt-10 flex flex-col w-11/12 md:w-2/4 p-4 md:rounded-full rounded-xl justify-center items-center bg-gradient-to-r from-yellow-200 via-lime-400 to-green-600 '>
           <h1 className='text-3xl md:text-4xl tracking-wider text-transparent bg-clip-text font-serif  bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))]  font-bold'>LinkedIn<FontAwesomeIcon className='text-white' icon={faLinkedin}/></h1>
-          <p data-aos="fade-right" className='text-blue-700 md:text-2xl text-xl mt-4 tracking-wider md:tracking-widest text-center'>https://www.linkedin.com/in/pranjul-rathour-259645204</p>
+          <Link to="https://www.linkedin.com/in/pranjul-rathour-259645204" data-aos="fade-right" className='text-blue-700 md:text-2xl text-xl mt-4 tracking-wider md:tracking-widest text-center'>https://www.linkedin.com/in/pranjul-rathour-259645204</Link>
         </div>
       </div>
       <div data-aos="fade-up" className='flex justify-center'>
         <div className='mt-10 flex flex-col md:w-2/4 w-11/12 p-4 md:rounded-full rounded-xl justify-center items-center bg-gradient-to-r from-yellow-200 via-lime-400 to-green-600 '>
           <h1 className='text-3xl md:text-4xl tracking-wider text-transparent bg-clip-text font-serif  bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))]  font-bold'>GitHub<FontAwesomeIcon className='text-white' icon={faGithub}/></h1>
-          <p data-aos="fade-right" className='text-blue-700 md:text-2xl text-xl mt-4 tracking-wider md:tracking-widest text-center'>https://www.linkedin.com/in/pranjul-rathour-259645204</p>
+          <Link to="https://github.com/pranjulrathour0916" data-aos="fade-right" className='text-blue-700 md:text-2xl text-xl mt-4 tracking-wider md:tracking-widest text-center'>https://github.com/pranjulrathour0916</Link>
         </div>
       </div>
       <div data-aos="fade-up" className='flex justify-center'>
