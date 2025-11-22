@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJs, faNodeJs, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faAddressBook, faDatabase, faHome, faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faAddressBook, faDatabase, faHome, faLightbulb, faRocket } from "@fortawesome/free-solid-svg-icons";
 const Skills = () => {
   const program = ['C', 'C++', 'JavaScript', 'TypeScript']
   const frontned = ['HTML5', 'Bootstrap', 'React.js', 'Angular 9']
@@ -39,7 +39,7 @@ const Skills = () => {
     <img src={blog1} className="md:text-right h-52 md:absolute" alt="" />
     <img src={blog2} className="md:text-right md:h-60 md:absolute mt-10 md:mt-60" alt="" />
       </div>
-        <p className="text-white md:mt-0 mt-10 text-xl md:mx-0 mx-5">React.js <FontAwesomeIcon icon={faReact}/> • Node.js <FontAwesomeIcon icon={faNodeJs}/> • Express.js <FontAwesomeIcon icon={faJs}/> • MongoDB <FontAwesomeIcon icon={faDatabase}/> • Postman</p> <br />
+        <p className="text-white md:mt-0 mt-10 text-xl md:mx-0 mx-5">React.js <FontAwesomeIcon icon={faReact}/> • Node.js <FontAwesomeIcon icon={faNodeJs}/> • Express.js <FontAwesomeIcon icon={faJs}/> • MongoDB <FontAwesomeIcon icon={faDatabase}/> • Postman <FontAwesomeIcon icon={faRocket}/></p> <br />
         <p data-aos="fade-up" className="md:w-2/4 text-white font-semibold font-mono md:mx-0 mx-5">A simple and user-friendly blogging platform built using the MERN stack, allowing users to create, edit, delete, and browse blog posts. Includes secure authentication, comment features, and a responsive UI for smooth reading and writing experiences.</p>
         <ul  data-aos="fade-up" className="mt-10 text-white space-y-2 list-disc font-medium tracking-wider md:w-2/4 md:mx-0 mx-5">
           <li>Developed a full-stack blogging website using MERN (MongoDB, Express, React, Node).</li>

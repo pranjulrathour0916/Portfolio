@@ -98,7 +98,7 @@ const About = () => {
         </div>
 
       </div>
-      <div className="btn mt-20 flex gap-5 md:gap-24 justify-center text-white">
+      <div data-aos="fade-up" className="btn mt-20 flex gap-5 md:gap-24 justify-center text-white">
         <button className='bg-lime-400 text-blue-950  p-3 rounded-md font-bold shadow-md hover:bg-orange-200' onClick={() => navigate('/about')}>Home
           <FontAwesomeIcon icon={faHome} className='mx-2 text-xl' />
         </button>
