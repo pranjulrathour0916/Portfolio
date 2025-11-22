@@ -22,6 +22,7 @@ function App() {
       />
       <div className="relative z-10">
         <Navbar />
+        
           <Routes>
             <Route path='/' element = {<Name/>}/>
             <Route path='/home' element = {<Name/>}/>
