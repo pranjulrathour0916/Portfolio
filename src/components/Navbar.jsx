@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     show && (
       <nav className="bg-transparent transition-all ease-in-out text-white px-8 py-4 md:flex md:justify-evenly items-center justify-between">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-lime-300 via-white to-blue-600 bg-clip-text text-transparent drop-shadow-md font-serif animate-[ping_1.5s_ease-in-out_1]">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-lime-300 via-white to-blue-600 bg-clip-text text-transparent drop-shadow-md font-serif ">
           Pranjul
         </h1>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
                 to="/about"
                 className={({ isActive }) =>
                   `p-2 rounded-lg ${isActive
-                    ? "bg-white text-black font-bold shadow-md"
+                    ? "bg-white text-black font-bold shadow-md underline"
                     : "hover:bg-white hover:text-black"
                   }`
                 }
@@ -62,7 +62,7 @@ const Navbar = () => {
                 to="/skills"
                 className={({ isActive }) =>
                   `p-2 rounded-lg ${isActive
-                    ? "bg-white text-black font-bold shadow-md"
+                    ? "bg-white text-black font-bold shadow-md underline"
                     : "hover:bg-white hover:text-black"
                   }`
                 }
@@ -75,7 +75,7 @@ const Navbar = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   `p-2 rounded-lg ${isActive
-                    ? "bg-white text-black font-bold shadow-md"
+                    ? "bg-white text-black font-bold shadow-md underline"
                     : "hover:bg-white hover:text-black"
                   }`
                 }

@@ -93,7 +93,7 @@ const About = () => {
         <div className='bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900 mt-10 md:mx-0 mx-4 md:w-2/3 rounded-xl p-2'>
           <p className='text-white font-bold text-3xl mx-4 '>BITS Pilani — M.Tech, Computer Systems & Infrastructure</p>
           <p className='text-gray-200 mt-1 mx-4 font-semibold'>Mar 2022 – Dec 2025</p>
-          <p className='mt-2 mx-4 text-gray-200 '><p className=' text-xl font-bold'>Coursework :</p><span className='font-medium'>Linux, Docker, Web Technologies, AWS, Kubernetes, Jenkins, Cloud Computing</span></p>
+          <p className='mt-2 mx-4 text-gray-200 '><span className=' text-xl font-bold'>Coursework :</span><span className='font-medium'>Linux, Docker, Web Technologies, AWS, Kubernetes, Jenkins, Cloud Computing</span></p>
           <p className='text-white font-bold mt-5 mx-4 text-3xl'>CSJM University — BCA (June 2018 – Apr 2021)</p>
         </div>
 
