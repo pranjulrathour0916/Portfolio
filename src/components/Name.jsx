@@ -1,10 +1,19 @@
 import photo from "../myphoto.jpeg";
 import "aos/dist/aos.css";
 import { easeInOut, motion } from "framer-motion";
-import Navigate from "./FlipCard/Navigate";
-import Touch from "./Footer/Touch";
 
+import AOS from "aos"; 
+import Touch from "./Footer/Touch";
+import { useEffect } from "react";
+import Typewriter from "typewriter-effect";
+import Navigate from "./FlipCard/Navigate";
 const Name = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
   return (
     <div>
       <div className="flex  justify-evenly items-center md:mt-30 mt-16 flex-col md:flex-row transition-opacity duration-[2000ms] ease-in-out">
@@ -37,6 +46,13 @@ const Name = () => {
               Rathour
             </span>
           </motion.span>
+           <span className="text-sm block whitespace-nowrap overflow-hidden text-ellipsis md:ml-6"> <Typewriter  options={{
+              strings : "MERN Stack Developer | Team Lead | ITSM Professional",
+              autoStart: true,
+              loop: false,
+              delay:20,
+              deleteSpeed : 999999
+            }} /></span>
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 100 }}
@@ -52,16 +68,9 @@ const Name = () => {
               technical solutions.
             </div>
           </motion.div>
-          <div>
-            <motion.button
-              initial={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 100 }}
-              transition={{ duration: 1, ease: easeInOut}}
-              className="mt-2 bg-lime-400 text-blue-950 p-1 rounded-md font-semibold "
-            >
-              Read More
-            </motion.button>
-          </div>
+        <div>
+     
+      </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -95,16 +104,22 @@ const Name = () => {
         </li>
       </motion.ul>
       <motion.h3
+        initial = {{opacity:0}}
+        whileInView={{opacity : 100}}
         whileHover={{
           scale: 1.02,
           boxShadow: "0px 0px 8px 5px rgba(0,0,0,0.2)",
         }}
-        className="text-white flex border-b-2 rounded-xl p-2 font-bold justify-center mt-10 mx-4 text-xl md:mx-20 tracking-wide"
+        className="text-white flex border-b-2 rounded-xl p-2 font-bold justify-center mt-10 mx-4 text-base md:mx-32 tracking-wide"
       >
-        Dynamic and results-oriented IT professional with hands-on experience in
-        incident management, service delivery, and full-stack JavaScript. I love
-        turning ideas into fast, reliable products—and supporting users
-        end-to-end.
+        <Typewriter options={{
+          strings : ["I’m a full-stack engineer who loves building fast, reliable, and scalable products. I specialize in the MERN stack and enjoy solving real-world problems through clean code and intuitive UI/UX. My background in service delivery and incident management makes me a strong collaborator who can communicate clearly, handle pressure, and deliver production-ready solutions."],
+          autoStart: true,
+          loop: false,
+          delay:30,
+          deleteSpeed:99999
+     
+        }}/>
       </motion.h3>
       <ul
         data-aos="fade-up"
@@ -138,17 +153,15 @@ const Name = () => {
           Tools I use daily: React, Node, MongoDB, Docker, Jenkins
         </motion.li>
       </ul>
-      <div>
-        <Navigate />
-      </div>
-      <div>
+     <Navigate/>
+      <motion.div
+      initial={{opacity:0}}
+      whileInView={{opacity:100}}
+      transition={{duration:1, ease:easeInOut, delay:0.5}}
+      >
         <Touch/>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      </motion.div>
+     <br />
     </div>
   );
 };
