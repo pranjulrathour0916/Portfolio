@@ -48,7 +48,7 @@ const About = () => {
                 ],
                 autoStart: true,
                 loop: false,
-                delay: 20,
+                delay: 15,
                 deleteSpeed: 99999,
               }}
             />
@@ -336,9 +336,9 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div>
         <Touch/>
-      </div>
+   
+    
 
       <br />
     

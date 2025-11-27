@@ -6,12 +6,14 @@ import { Route, Routes } from 'react-router-dom';
 import About from './components/About';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const darkMode = useSelector(state => state.theme.darkMode);
 
   return (
     <div className="relative min-h-screen overflow-hidden transition-all duration-700 ease-in-out">
+          <Toaster position="top-center" reverseOrder={false} />
       <div
         className={`absolute inset-0 bg-gradient-to-tr from-gray-600 via-blue-500 to-cyan-400 transition-opacity duration-700 ease-in-out 
           ${darkMode ? 'opacity-0' : 'opacity-100'}`}
