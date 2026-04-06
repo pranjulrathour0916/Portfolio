@@ -21,7 +21,7 @@ document.querySelectorAll(".fade-scroll").forEach((el) => observer.observe(el));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio">
     <ScrollToTop/>
     <App />
     </BrowserRouter>
