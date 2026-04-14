@@ -47,7 +47,7 @@ const Name = () => {
             </span>
           </motion.span>
            <span className="text-sm block whitespace-nowrap overflow-hidden text-ellipsis md:ml-6"> <Typewriter  options={{
-              strings : "MERN Stack Developer | Team Lead | ITSM Professional",
+              strings : "MERN Stack Developer | Team Lead | DevOps Enthusiast",
               autoStart: true,
               loop: false,
               delay:20,
@@ -91,16 +91,22 @@ const Name = () => {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
         transition={{ duration: 1, ease: easeInOut }}
-        className="p-1 text-white font-bold flex flex-col items-center justify-center gap-4 md:w-2/4 md:ml-10 mt-10"
+        className="p-1 text-white font-bold flex flex-col md:flex-row items-center justify-center gap-4 md:mx-10 mt-10"
       >
         <li className="inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce">
-          🚀 Real-time MERN application
+          Full Stack Product Development
         </li>
         <li className="inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce">
-          🔐 Secure, supportable solutions (ITIL mindset)
+          Cloud Deployment & Hosting
         </li>
         <li className="inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce">
-          🤝 Clear communication, fast iteration
+           Containerization & CI/CD Automation
+        </li>
+        <li className="inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce">
+           Production-grade Authentication & Security
+        </li>
+        <li className="inline-block bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))] p-2 rounded-lg hover:animate-bounce">
+           Database Design & API Architecture
         </li>
       </motion.ul>
       <motion.h3
@@ -113,7 +119,7 @@ const Name = () => {
         className="text-white flex border-b-2 rounded-xl p-2 font-bold justify-center mt-10 mx-4 text-base md:mx-32 tracking-wide"
       >
         <Typewriter options={{
-          strings : ["I’m a full-stack engineer who loves building fast, reliable, and scalable products. I specialize in the MERN stack and enjoy solving real-world problems through clean code and intuitive UI/UX. My background in service delivery and incident management makes me a strong collaborator who can communicate clearly, handle pressure, and deliver production-ready solutions."],
+          strings : ["I’m a passionate Full Stack Developer with expertise in building production-ready web applications using the MERN ecosystem and modern backend technologies.Recently, I developed a full-featured eCommerce platform 'My Mart', where I implemented advanced frontend state management, secure authentication, robust backend APIs, and cloud deployment workflows.Beyond development, I actively practice DevOps by containerizing applications, building CI/CD pipelines, and deploying Docker images to cloud registries like AWS ECR and Docker Hub."],
           autoStart: true,
           loop: false,
           delay:30,
@@ -150,7 +156,7 @@ const Name = () => {
           }}
           className=" border-l-2 border-b-2 flex justify-center md:text-xl text-center shadow-xl tracking-widest items-center w-64 md:h-40 h-24 rounded-xl   "
         >
-          Tools I use daily: React, Node, MongoDB, Docker, Jenkins
+          Tools I use daily: React, Node, MongoDB, Docker, Github Actions
         </motion.li>
       </ul>
      <Navigate/>

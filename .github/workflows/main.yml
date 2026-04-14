@@ -41,12 +41,12 @@ jobs:
       - name: Configure AWS Credentials
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_KEY }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECERET_KEY }}
 
       - name: AWS ECR login
         run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 585768189252.dkr.ecr.us-east-1.amazonaws.com
       - name: Tgging image
-        run: docker tag pranjulrathour/portfolio:latest 585768189252.dkr.ecr.us-east-1.amazonaws.com/pranjulrathour/portfolio:latest
+        run: docker tag pranulrathour/portfolio:latest 585768189252.dkr.ecr.us-east-1.amazonaws.com/pranjulrathour/portfolio:latest
       - name: Pushing image
         run: docker push 585768189252.dkr.ecr.us-east-1.amazonaws.com/pranjulrathour/portfolio:latest
       

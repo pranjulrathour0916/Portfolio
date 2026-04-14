@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import photo from "../photo2.jpeg";
 import Flipcard from "./FlipCard/Flipcard";
-import { faDocker } from "@fortawesome/free-brands-svg-icons/faDocker";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons/faDatabase";
+
 import {
   faBookOpenReader,
   faBuilding,
+  faCloudDownload,
+  faDharmachakra,
+  faDiagramProject,
+  faGears,
   faHistory,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
@@ -15,6 +17,7 @@ import "aos/dist/aos.css";
 import { easeInOut, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import Touch from "./Footer/Touch";
+// import { faCloud } from "@fortawesome/free-regular-svg-icons";
 const About = () => {
   const MotionIcon = motion(FontAwesomeIcon);
   useEffect(() => {
@@ -44,7 +47,7 @@ const About = () => {
             <Typewriter
               options={{
                 strings: [
-                  "I’m an IT professional and developer focused on building clean,performant web experiences and keeping them robust in production.With a background in IT service management (ServiceNow, Active Directory, Office 365) and a strong foundation in MERN, I bridge development and operations—delivering features quickly while maintaining security, reliability, and great user support.",
+                  "I’m a Full Stack Developer and Team Lead with 4+ years of professional experience across enterprise environments, combining strong software engineering expertise with operational leadership. My core strength lies in building scalable, production-ready web applications and deploying them using modern DevOps practices. Recently, I developed a complete eCommerce platform — My Mart — where I designed and implemented the frontend, backend, authentication system, database architecture, deployment workflows, and CI/CD automation. With a background in IT service management and enterprise support, I bring a reliability-first mindset to software development—focusing on performance, maintainability, security, and smooth production operations.",
                 ],
                 autoStart: true,
                 loop: false,
@@ -65,7 +68,7 @@ const About = () => {
       </div>
       <motion.div className="flex justify-center mt-10">
         <h1 className=" text-3xl md:text-4xl font-bold bg-clip-text text-slate-100  underline shadow-lg ">
-          What I'm Good At
+          Core Expertise
         </h1>
       </motion.div>
       <motion.div
@@ -77,15 +80,19 @@ const About = () => {
       >
         <Flipcard
           front="Full-stack JavaScript"
-          back="React, Node.js, Express.js, MongoDB"
+          back="React.js, Redux Toolkit, TanStack Query, Node.js, Express.js, PostgreSQL, MongoDB"
         />
         <Flipcard
-          front="Production readiness"
-          back="Incident handling, SLAs, monitoring, documentation"
+          front="Backend & System Design"
+          back="REST APIs, Authentication, Authorization, JWT Security, Zod Validation, Database Modeling"
         />
         <Flipcard
-          front="Collaboration"
-          back="Clear communication, prioritization by impact/urgency, cross-team work"
+          front="DevOps & Deployment"
+          back="Docker, GitHub Actions, CI/CD Pipelines, Docker Hub, AWS ECR, Vercel, Render, Supabase"
+        />
+        <Flipcard
+          front="Leadership & Collaboration"
+          back="Team Leadership, Incident Management, Technical Mentoring, SLA Management"
         />
       </motion.div>
       <div
@@ -107,10 +114,10 @@ const About = () => {
             }}
             className="transform-gpu"
           >
-            Advanced React patterns and TypeScript for safer frontends
+            Kubernetes (K8s) for Container Orchestration
             <FontAwesomeIcon
-              icon={faReact}
-              className="text-blue-900  ml-2 text-2xl "
+              icon={faDharmachakra}
+              className="text-[#326CE5] ml-2 text-2xl "
             />
           </motion.li>
           <motion.li
@@ -124,8 +131,8 @@ const About = () => {
             }}
             className="transform-gpu"
           >
-            Docker/Kubernetes for containerized deployments
-            <FontAwesomeIcon icon={faDocker} className="ml-2 text-lime-200" />
+            Advanced DevOps & Cloud Deployment Strategies
+            <FontAwesomeIcon icon={faCloudDownload} className="ml-2 text-[#0EA5E9]" />
           </motion.li>
           <motion.li
             initial={{ x: -100, opacity: 0 }}
@@ -138,10 +145,27 @@ const About = () => {
             }}
             className="transform-gpu"
           >
-            Data modeling for scalable MongoDB apps
+            Scalable System Design & Microservices Architecture
             <FontAwesomeIcon
-              icon={faDatabase}
-              className="ml-2 text-green-500"
+              icon={faDiagramProject}
+              className="ml-2 text-[#8B5CF6]"
+            />
+          </motion.li>
+          <motion.li
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{
+              x: { duration: 1.5, ease: easeInOut },
+              opacity: { duration: 2, ease: easeInOut },
+              scale: { duration: 0.15, ease: easeInOut }, // used for BOTH hover in & out
+            }}
+            className="transform-gpu"
+          >
+            Infrastructure Automation & Production Monitoring
+            <FontAwesomeIcon
+              icon={faGears}
+              className="ml-2 text-[#10B981]"
             />
           </motion.li>
         </ul>

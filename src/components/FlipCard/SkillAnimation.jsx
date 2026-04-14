@@ -19,6 +19,7 @@ const SkillAnimation = ({ item }) => {
                     className="p-3 bg-white font-semibold rounded-full "
                     key={index}
                   >
+                   
                     <span className="text-black">
                       {item}
                     </span>{" "}
