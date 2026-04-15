@@ -108,8 +108,8 @@ const Skills = () => {
         }}
         className="md:mx-24 mx-7 rounded-xl mt-16 border shadow-2xl md:p-10"
       >
-       <div className="flex">
-         <h1 className="md:text-3xl md:mx-0 mx-3 text-white font-medium">
+       <div className="md:flex">
+         <h1 className="md:text-3xl mt-4 md:mt-0 md:mx-0 mx-3 text-white font-bold text-xl">
           <Typewriter
             options={{
               strings: [
@@ -123,168 +123,176 @@ const Skills = () => {
             }}
           />
         </h1>{" "}
-        <Link target="/" to={'https://my-mart-two.vercel.app'} className="text-white  p-2 ml-4 rounded-xl bg-blue-600 hover:bg-blue-700">Live Demo</Link>
+        <div className="md:mt-0 mt-4">
+          <Link target="/" to={'https://my-mart-two.vercel.app'} className="text-white  p-2 ml-4 rounded-xl bg-blue-600 hover:bg-blue-700">Live Demo</Link>
         <Link target="/" to={"https://github.com/pranjulrathour0916/MyMart_Docker_Project"} className="text-white  p-2 ml-4 rounded-xl bg-gray-900 hover:bg-gray-800">GitHub</Link>
+        </div>
        </div>
         <br />
      <div className="flex justify-between items-start w-full">
   
   {/* Left Side - Text */}
-  <div className=" w-3/4 p-4">
+  <div className="flex flex-col lg:flex-row w-full gap-8 p-4 lg:p-8">
+  
+  {/* Left Side Content */}
+  <div className="w-full lg:w-2/3">
     <motion.div
-          initial={{ y: 200, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 1.3, duration: 1, ease: easeInOut }}
-        >
-          <div className="text-white md:mt-0 mt-10 text-xl md:mx-0 mx-5 ">
-            React.js{" "}
-            <Motionicon
-              className="text-blue-900"
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 2,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              icon={faReact}
-            />{" "}
-            • Node.js{" "}
-            <Motionicon
-              className="text-green-500"
-              animate={{ rotateY: 360 }}
-              transition={{
-                duration: 2,
-                ease: easeInOut,
-                repeat: Infinity,
-                repeatType: "loop",
-                delay: 0.5,
-              }}
-              icon={faNodeJs}
-            />{" "}
-            • Express.js{" "}
-            <FontAwesomeIcon
-              className="text-yellow-300 animate-pulse"
-              icon={faJs}
-            />{" "}
-            • PostgreSQL{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#336791]"
-              icon={faDatabase}
-            />{" "}
-            • Docker{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#0DB7ED]"
-              icon={faDocker}
-            />{" "}
-            • TanStack Query{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#FF4154]"
-              icon={faBolt}
-            />{" "}
-            • Redux Toolkit{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#764ABC]"
-              icon={faReact}
-            />{" "}
-            • JWT{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#F59E0B]"
-              icon={faKey}
-            />{" "}
-            • Zod{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#3B82F6]"
-              icon={faShield}
-            />{" "}
-            • Docker Hub{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#2496ED]"
-              icon={faDocker}
-            />{" "}
-            • GitHub Actions{" "}
-            <Motionicon
-              animate={{ rotateZ: 360 }}
-              transition={{
-                duration: 3,
-                ease: easeInOut,
-                repeat: Infinity,
-                delay: 0.3,
-              }}
-              className="text-[#2088FF]"
-              icon={faGithub}
-            />{" "}
-          </div>{" "}
-          <br />
-          <motion.p
-            initial={{ y: 300, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: easeInOut }}
-            viewport={{ once: true }}
-            className=" text-white tracking-wide font-semibold md:mx-0 mx-5"
-          >
-            My Mart is a full-featured production-ready eCommerce web
-            application built to simulate a real-world online shopping platform.
-            The project was designed and developed end-to-end to strengthen my
-            expertise across modern frontend development, backend architecture,
-            secure authentication, database design, DevOps automation,
-            containerization, and cloud deployment. This project represents my
-            transition from MERN-only development into full-stack engineering
-            with DevOps practices.
-          </motion.p>
-          <ul className="mt-10 text-white space-y-2 list-disc font-medium tracking-wider  md:mx-0 mx-5">
+      initial={{ y: 200, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: 1.3, duration: 1, ease: easeInOut }}
+    >
+      <div className="text-white mt-6 lg:mt-0 text-sm sm:text-base md:text-lg break-words">
+        React.js{" "}
+        <Motionicon
+          className="text-blue-900"
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 2,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          icon={faReact}
+        />{" "}
+        • Node.js{" "}
+        <Motionicon
+          className="text-green-500"
+          animate={{ rotateY: 360 }}
+          transition={{
+            duration: 2,
+            ease: easeInOut,
+            repeat: Infinity,
+            repeatType: "loop",
+            delay: 0.5,
+          }}
+          icon={faNodeJs}
+        />{" "}
+        • Express.js{" "}
+        <FontAwesomeIcon
+          className="text-yellow-300 animate-pulse"
+          icon={faJs}
+        />{" "}
+        • PostgreSQL{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#336791]"
+          icon={faDatabase}
+        />{" "}
+        • Docker{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#0DB7ED]"
+          icon={faDocker}
+        />{" "}
+        • TanStack Query{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#FF4154]"
+          icon={faBolt}
+        />{" "}
+        • Redux Toolkit{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#764ABC]"
+          icon={faReact}
+        />{" "}
+        • JWT{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#F59E0B]"
+          icon={faKey}
+        />{" "}
+        • Zod{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#3B82F6]"
+          icon={faShield}
+        />{" "}
+        • Docker Hub{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#2496ED]"
+          icon={faDocker}
+        />{" "}
+        • GitHub Actions{" "}
+        <Motionicon
+          animate={{ rotateZ: 360 }}
+          transition={{
+            duration: 3,
+            ease: easeInOut,
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+          className="text-[#2088FF]"
+          icon={faGithub}
+        />
+      </div>
+
+      <br />
+
+      <motion.p
+        initial={{ y: 300, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: easeInOut }}
+        viewport={{ once: true }}
+        className="text-white tracking-wide font-medium text-sm sm:text-base md:text-lg"
+      >
+        My Mart is a full-featured production-ready eCommerce web
+        application built to simulate a real-world online shopping platform.
+        The project was designed and developed end-to-end to strengthen my
+        expertise across modern frontend development, backend architecture,
+        secure authentication, database design, DevOps automation,
+        containerization, and cloud deployment. This project represents my
+        transition from MERN-only development into full-stack engineering
+        with DevOps practices.
+      </motion.p>
+
+      <ul className="mt-10 text-white space-y-2 list-disc font-medium tracking-wider text-sm sm:text-base">
           <h1 className="text-2xl underline text-slate-300 ">FRONTEND DEVELOPMENT</h1>
-            <div className="ml-6">
+            <div className="md:ml-6 ml-2">
               <motion.li
               initial={{ y: 300, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -638,20 +646,42 @@ const Skills = () => {
             Practiced cloud-native deployment workflow preparation
             </motion.li>
             </div>
-          </ul>
-        </motion.div>
+          
+      </ul>
+    </motion.div>
   </div>
 
-  {/* Right Side - Box */}
-  <div className=" mt-6 p-2 ">
-    <div className="  md:flex-col flex gap-16">
-      <img src={HomePage1} className="h-56" alt="" />
-      <img src={HomePage2} className="h-56" alt="" />
-      <img src={selcedItem} className="h-56" alt="" />
-      <img src={selected} className="h-56" alt="" />
-      <img src={ER} className="h-56" alt="" />
+  {/* Right Side Images */}
+  <div className="w-full lg:w-1/3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+      <img
+        src={HomePage1}
+        className="w-full h-auto object-cover rounded-lg"
+        alt=""
+      />
+      <img
+        src={HomePage2}
+        className="w-full h-auto object-cover rounded-lg"
+        alt=""
+      />
+      <img
+        src={selcedItem}
+        className="w-full h-auto object-cover rounded-lg"
+        alt=""
+      />
+      <img
+        src={selected}
+        className="w-full h-auto object-cover rounded-lg"
+        alt=""
+      />
+      <img
+        src={ER}
+        className="w-full h-auto object-cover rounded-lg"
+        alt=""
+      />
     </div>
   </div>
+</div>
 
 </div>
       
@@ -756,14 +786,14 @@ const Skills = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: easeInOut }}
-            className="md:w-2/4 text-white tracking-wide font-semibold md:mx-0 mx-5"
+            className="md:w-2/4 text-white tracking-wide font-semibold md:mx-0 mx-5 "
           >
             A simple and user-friendly blogging platform built using the MERN
             stack, allowing users to create, edit, delete, and browse blog
             posts. Includes secure authentication, comment features, and a
             responsive UI for smooth reading and writing experiences.
           </motion.p>
-          <ul className="mt-10 text-white space-y-2 list-disc font-medium tracking-wider md:w-2/4 md:mx-0 mx-5">
+          <ul className="mt-10 text-white space-y-2 list-disc font-medium tracking-wider md:w-2/4 md:mx-0 mx-5 ">
             <motion.li
               initial={{ y: 300, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}

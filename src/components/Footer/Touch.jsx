@@ -94,8 +94,8 @@ const Touch = () => {
           backdrop-blur-xl text-white p-3 hover:bg-white hover:text-black "
             >
               <a
-                href="/Pranjul_Rathour_Resume.pdf"
-                download="Pranjul_Rathour_Resume.pdf"
+                href="/Pranjul_Rathour_Resume-2.pdf"
+                download="Pranjul_Rathour_Resume-2.pdf"
               >
                 <FontAwesomeIcon className=" text-4xl" icon={faFile} />
               </a>
