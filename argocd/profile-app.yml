@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: portfolio
+  namespace: argocd 
+spec:
+  project: my-porj 
+  source:
+    repoURL: https://github.com/pranjulrathour0916/Portfolio.git
+    targetRevision: dev 
+    path: k8s/portfolio     
+
+    helm:
+      valueFiles:
+        - values.yaml
+    
+
+  destination:
+    server: https://kubernetes.default.svc 
+    namespace: prof
+    
+ 
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true # Auto-create the target namespace if missing
