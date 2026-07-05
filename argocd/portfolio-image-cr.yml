@@ -1,25 +1,21 @@
 apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
-
 metadata:
-  name: portfolio
+  name: my-image-updater
   namespace: argocd
-
 spec:
+  writeBackConfig:
+    method: "git:secret:argocd/git-creds"
+    gitConfig:
+      repository: "https://github.com/pranjulrathour0916/Portfolio.git"
+      branch: "dev"
   applicationRefs:
-    - namePattern: portfolio
-
+    - namePattern: "portfolio"
       images:
-        - alias: portfolio
-          imageName: pranjulrathour/portfolio
-          manifestTargets:
-            helm:
-              name: image.repository
-              tag: image.tag
-
-      commonUpdateSettings:
-        updateStrategy: semver
-        allowTags: "*"
-
+        - alias: "portfolio"
+          imageName: "pranulrathour/portfolio"
       writeBackConfig:
-        method: git:secret:argocd/my-git-creds
+        method: "git:secret:argocd/git-creds"
+        gitConfig:
+          branch: "dev"
+          writeBackTarget: "helmvalues:k8s/portfolio/values.yaml"

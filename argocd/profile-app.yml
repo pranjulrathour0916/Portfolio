@@ -3,6 +3,14 @@ kind: Application
 metadata:
   name: portfolio
   namespace: argocd 
+  annotations:
+    # 1. Register the image with an alias
+    argocd-image-updater.argoproj.io/image-list: portfolio=pranulrathour/portfolio
+    # 2. Tell the updater to use Helm to update these keys
+    argocd-image-updater.argoproj.io/portfolio.helm.image-name: image.repository
+    argocd-image-updater.argoproj.io/portfolio.helm.image-tag: image.tag
+    # 3. (Optional) Set the update strategy
+    argocd-image-updater.argoproj.io/portfolio.update-strategy: semver
 spec:
   project: my-porj 
   source:
@@ -17,7 +25,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc 
-    namespace: prof
+    namespace: argocd
     
  
   syncPolicy:
