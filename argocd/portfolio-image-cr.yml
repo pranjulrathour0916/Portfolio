@@ -1,0 +1,25 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+
+metadata:
+  name: portfolio
+  namespace: argocd
+
+spec:
+  applicationRefs:
+    - namePattern: portfolio
+
+      images:
+        - alias: portfolio
+          imageName: pranjulrathour/portfolio
+          manifestTargets:
+            helm:
+              name: image.repository
+              tag: image.tag
+
+      commonUpdateSettings:
+        updateStrategy: semver
+        allowTags: "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+
+      writeBackConfig:
+        method: git
